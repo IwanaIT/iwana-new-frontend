@@ -698,7 +698,7 @@ select.form-control.has-value {
 
 @media (min-width: 320px) and (max-width: 992px) {
     .navbar {
-        background: #202877 !important;
+        background: #FFFFFF !important;
         padding: .95rem 1rem;
     }
 
@@ -753,7 +753,7 @@ select.form-control.has-value {
 @media (min-width: 992px) {
     .navbar {
         border-bottom: 1px solid rgba(0, 0, 0, 0);
-        background: transparent;
+        background: #FFFFFF !important;
         -o-transition: border-bottom .3s ease-in-out, background .3s ease-in-out, padding .3s ease-in-out;
         -webkit-transition: border-bottom .3s ease-in-out, background .3s ease-in-out, padding .3s ease-in-out;
         -moz-transition: border-bottom .3s ease-in-out, background .3s ease-in-out, padding .3s ease-in-out;
@@ -2373,7 +2373,7 @@ select.form-control.has-value {
 .accordion-faq.accordion>.card {
     overflow: hidden;
     border-color: #ebebeb;
-    ;
+;
     border-width: 1px 1px 0 1px;
 }
 
