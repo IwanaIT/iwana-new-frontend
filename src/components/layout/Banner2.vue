@@ -1,8 +1,8 @@
 <template>
-  <section class="hero-section pt-100 banner-section background-img">
+  <section class="hero-section pt-100 banner-section">
     <div class="container-fluid">
       <div class="row align-items-center justify-content-between">
-        <div class="col-md-9 col-lg-9">
+        <div class="col-md-12">
           <carousel
               :autoplay="true"
               :dots="true"
@@ -23,9 +23,6 @@
             <img src="test/banner-whole.jpg" class="img-fluid">
           </carousel>
         </div>
-        <div class="col-md-3 col-lg-3">
-          <login-box/>
-        </div>
       </div>
     </div>
   </section>
@@ -34,15 +31,13 @@
 <script>
 // import SubmitQuote from "../../views/index-six/SubmitQuote";
 import carousel from 'vue-owl-carousel'
-import LoginBox from "@/components/LoginBox";
 
-//import YTModal from "../../components/YTModal";
 export default {
   name: "VideoPromo",
   components: {
     // SubmitQuote,
     carousel,
-    LoginBox
+
   },
   data: function () {
     return {
@@ -59,5 +54,7 @@ export default {
 </script>
 
 <style>
-
+.banner-section {
+  margin-top: 15px;
+}
 </style>

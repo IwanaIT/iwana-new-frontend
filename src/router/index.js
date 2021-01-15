@@ -40,6 +40,12 @@ const routes = [
     meta: { title: 'Home 1 - Appco - App Landing Page Template' }
   },
   {
+    path: '/home2',
+    name: 'HomePage2',
+    component: () => import("@/views/Home2"),
+    meta: { title: 'Home 1 - Appco - App Landing Page Template' }
+  },
+  {
     path: '/',
     name: 'IndexOne',
     component: IndexOne,

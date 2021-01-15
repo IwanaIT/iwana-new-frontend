@@ -1,11 +1,10 @@
 <template>
     <header class="header">
-        <!--start navbar-->
         <nav class="navbar navbar-expand-lg fixed-top"
             v-bind:class="{
                 affix: hasAffix,
                 'custom-nav': coloredLogo,
-                'bg-transparent': !coloredLogo,
+                'bg-transparent': coloredLogo,
                 'white-bg': coloredLogo,
             }"
         >
@@ -14,10 +13,10 @@
                   <img
                         :src="
                             coloredLogo
-                                ? 'img/logo-color-1x.png'
-                                : 'img/logo-white-1x.png'
+                               ? 'images/iwanacash-logo.svg'
+                                : 'images/iwanacash-logo.svg'
                         "
-                        width="120"
+                        width="220"
                         alt="logo"
                         class="img-fluid"
                 /></a>
