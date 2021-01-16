@@ -6,6 +6,7 @@
       <como-comprar/>
       <destacado-en/>
       <testimonios/>
+      <partners/>
     </div>
   </div>
 </template>
@@ -16,6 +17,7 @@ import Banner2 from "@/components/layout/Banner2";
 import ComoComprar from "@/components/layout/ComoComprar";
 import DestacadoEn from "@/components/layout/DestacadoEn";
 import Testimonios from "@/components/layout/Testimonios";
+import Partners from "@/components/layout/Partners";
 
 export default {
   name: "Home",
@@ -25,6 +27,7 @@ export default {
     ComoComprar,
     DestacadoEn,
     Testimonios,
+    Partners
   },
 }
 </script>
