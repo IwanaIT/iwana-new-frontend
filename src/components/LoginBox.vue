@@ -1,65 +1,56 @@
 <template>
-  <div class="card login-signup-card shadow-lg mb-0">
-    <div class="card-body px-md-5 py-5">
-      <div class="mb-5">
-        <h5 class="h3">Login</h5>
-        <p class="text-muted mb-0">
-          Sign in to your account to continue.
-        </p>
+  <form class="login-signup-form">
+    <div class="form-group">
+      <label class="pb-1">Correo Electrónico</label>
+      <div class="input-group input-group-merge">
+        <div class="input-iwana-icon">
+          <span class="ti-email color-iwana-primary"></span>
+        </div>
+        <input type="email" class="form-control" placeholder="Correo Electrónico"/>
       </div>
+    </div>
 
-      <!--login form-->
-      <form class="login-signup-form">
-        <div class="form-group">
-          <label class="pb-1">Email Address</label>
-          <div class="input-group input-group-merge">
-            <div class="input-icon">
-              <span class="ti-email color-primary"></span>
-            </div>
-            <input
-                type="email"
-                class="form-control"
-                placeholder="name@yourdomain.com"
-            />
-          </div>
+    <div class="form-group">
+      <div class="row">
+        <div class="col">
+          <label class="pb-1">Contraseña</label>
         </div>
-        <!-- Password -->
-        <div class="form-group">
-          <div class="row">
-            <div class="col">
-              <label class="pb-1">Password</label>
-            </div>
-            <div class="col-auto">
-              <a href="password-reset.html" class="form-text small text-muted">
-                Forgot password?
-              </a>
-            </div>
-          </div>
-          <div class="input-group input-group-merge">
-            <div class="input-icon">
-              <span class="ti-lock color-primary"></span>
-            </div>
-            <input
-                type="password"
-                class="form-control"
-                placeholder="Enter your password"
-            />
-          </div>
+        <div class="col-auto">
+          <a href="password-reset.html" class="form-text small text-muted">
+            ¿Olvidó su contraseña?
+          </a>
         </div>
+      </div>
+      <div class="input-group input-group-merge">
+        <div class="input-iwana-icon">
+          <span class="ti-lock color-iwana-primary"></span>
+        </div>
+        <input type="password" class="form-control" placeholder="Ingrese una Contraseña"/>
+      </div>
+    </div>
 
-        <!-- Submit -->
-        <button class="btn btn-lg btn-block solid-btn border-radius mt-4 mb-3">
-          Sign in
+    <!-- Submit -->
+    <div class="mb-4">
+      <button class="btn btn-lg btn-block solid-iwana-btn border-radius mt-4 mb-3">
+        Ingresar
+      </button>
+    </div>
+    <p class="text-center">También puedes ingresar utilizando redes sociales</p>
+    <div class="row justify-content-center">
+      <div class="mr-1">
+        <button class="btn facebook-btn">
+          <b-icon icon="facebook" font-scale="2"/>
+          Facebook
         </button>
-      </form>
+      </div>
+      <div>
+        <button class="btn google-btn">
+          <b-icon icon="google" font-scale="2"></b-icon>
+          Google
+        </button>
+      </div>
     </div>
-    <div class="card-footer bg-transparent border-top px-md-5">
-      <small>Not registered?</small>
-      <a href="sign-up.html" class="small">
-        Create una Cuenta
-      </a>
-    </div>
-  </div>
+  </form>
 </template>
 
 <script>
