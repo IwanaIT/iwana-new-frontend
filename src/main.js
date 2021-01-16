@@ -1,8 +1,10 @@
 import Vue from 'vue';
+import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 import App from './App.vue';
 import './registerServiceWorker';
 import router from './router';
 import store from './store';
+import ApiService from "@/services/api.service";
 
 // ------------ css ----------
 import './assets/css/bootstrap.min.css';
@@ -15,6 +17,10 @@ import VueScrollTo from 'vue-scrollto';
 import VueYoutube from 'vue-youtube';
 import { gsap } from 'gsap';
 import { CSSRulePlugin } from "gsap/CSSRulePlugin";
+
+Vue.use(BootstrapVue)
+// Optionally install the BootstrapVue icon components plugin
+Vue.use(IconsPlugin)
 
 import jQuery from 'jquery';
 window.$ = jQuery;
@@ -29,6 +35,7 @@ Vue.use(VueYoutube);
 gsap.registerPlugin(CSSRulePlugin);
 
 Vue.config.productionTip = false
+ApiService.init();
 
 new Vue({
   router,

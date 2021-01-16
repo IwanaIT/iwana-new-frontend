@@ -52,30 +52,38 @@
         <div class="collapse navbar-collapse main-menu h-auto" v-bind:class="{ show: !collapsed }" id="navbarUser">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item nav-link page-scroll">
-              <button type="button" class="btn btn-outline-info">Entrar</button>
+
+              <b-button variant="outline-info" v-b-modal.entrar>Entrar</b-button>
+              <login-modal/>
+
             </li>
             <li class="nav-item nav-link page-scroll">
-              <b-button v-b-modal.modal-1>Launch demo modal</b-button>
-              <button type="button" class="btn btn-outline-info">Registrarse</button>
+              <b-button variant="outline-info" v-b-modal.modal-1>Registrarse</b-button>
             </li>
           </ul>
         </div>
       </div>
 
-      <b-modal id="modal-1" title="BootstrapVue">
-        <p class="my-4">Hello from modal!</p>
-      </b-modal>
+
+
+
     </nav>
   </header>
 </template>
 
 <script>
+import LoginModal from "@/components/LoginModal";
+
+
 export default {
   props: {
     coloredLogo: {
       type: Boolean,
       default: false,
     },
+  },
+  components: {
+    LoginModal
   },
   data: function () {
     return {
