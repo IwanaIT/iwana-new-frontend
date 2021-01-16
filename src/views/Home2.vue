@@ -7,6 +7,7 @@
       <destacado-en/>
       <testimonios/>
       <partners/>
+      <footer-landing />
     </div>
   </div>
 </template>
@@ -18,6 +19,7 @@ import ComoComprar from "@/components/layout/ComoComprar";
 import DestacadoEn from "@/components/layout/DestacadoEn";
 import Testimonios from "@/components/layout/Testimonios";
 import Partners from "@/components/layout/Partners";
+import FooterLanding from "@/components/layout/Footer";
 
 export default {
   name: "Home",
@@ -27,7 +29,8 @@ export default {
     ComoComprar,
     DestacadoEn,
     Testimonios,
-    Partners
+    Partners,
+    FooterLanding
   },
 }
 </script>
