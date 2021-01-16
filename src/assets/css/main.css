@@ -2633,11 +2633,11 @@ select.form-control.has-value {
 .owl-custom-nav-parent .owl-nav [class*=owl-] span {
     font-size: 20px !important;
     line-height: 20px;
-    color: #9629e6;
+    color: #17a2b8;
 }
 
 .owl-custom-nav-parent .owl-nav [class*=owl-]:hover {
-    background: #9629e6 !important;
+    background: #17a2b8 !important;
 }
 
 .owl-custom-nav-parent .owl-nav [class*=owl-]:hover span {
@@ -2657,7 +2657,7 @@ select.form-control.has-value {
 .owl-custom-nav-parent .owl-nav [class*=owl-] {
     font-size: 20px !important;
     line-height: 25px;
-    color: #9629e6 !important;
+    color: #17a2b8 !important;
     text-align: center;
     vertical-align: middle;
 }
