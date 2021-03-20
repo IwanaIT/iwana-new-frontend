@@ -180,7 +180,6 @@ video {
     margin: 0;
     padding: 0;
     border: 0;
-    font-size: 100%;
     font: inherit;
     vertical-align: baseline;
 }
@@ -634,6 +633,24 @@ select.form-control.has-value {
     box-shadow: 0 2px 8px rgba(0, 0, 0, .12);
 }
 
+.main-menu ul>li .submenu-large {
+    width: 250px;
+    background-color: #f4f7fa;
+    border: 1px solid #ebebeb;
+    border-radius: 4px;
+    position: absolute;
+    top: 55px;
+    left: -4.2em;
+    right: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .3s ease-in-out;
+    transform: rotateX(-90deg) rotateY(0);
+    transform-origin: 0 0;
+    -webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, .12);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .12);
+}
+
 .main-menu ul>li .submenu.dropdown-menu {
     margin: 0;
     padding: 0;
@@ -701,7 +718,6 @@ select.form-control.has-value {
 }
 
 .navbar-toggler span {
-    color: #ffffff;
     opacity: 0.8;
     font-size: 17px;
 }

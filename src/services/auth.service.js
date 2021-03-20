@@ -41,7 +41,6 @@ const actions = {
         });
 
         ApiService.setHeader();
-
         return ApiService.get(userInfo).then(response => {
             let user = response.data.data;
             user.token = token;
