@@ -1,6 +1,6 @@
 <template>
   <section class="hero-section pt-100 banner-section">
-    <div class="container-fluid">
+    <div class="container-fluid banner-container">
       <div class="row align-items-center justify-content-between">
         <div class="col-md-12">
           <carousel
@@ -29,13 +29,11 @@
 </template>
 
 <script>
-// import SubmitQuote from "../../views/index-six/SubmitQuote";
 import carousel from 'vue-owl-carousel'
 
 export default {
   name: "VideoPromo",
   components: {
-    // SubmitQuote,
     carousel,
 
   },
@@ -56,5 +54,8 @@ export default {
 <style>
 .banner-section {
   margin-top: 15px;
+}
+.banner-container {
+  width: 60%;
 }
 </style>
