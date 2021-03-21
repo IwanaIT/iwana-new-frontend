@@ -37,6 +37,12 @@ const routes = [
         meta: {title: 'Home 1 - Appco - App Landing Page Template'}
     },
     {
+        path: '/tiendas',
+        name: 'ListaTiendas',
+        component: () => import("../views/ListaTiendas"),
+        meta: {title: 'Home 1 - Appco - App Landing Page Template'}
+    },
+    {
         path: '/tienda',
         name: 'Tienda',
         component: () => import("../views/Tienda"),
@@ -252,10 +258,22 @@ const router = new VueRouter({
 });
 
 router.beforeEach((to, from, next) => {
+
+    // Si la página está marcada como 'requiresAuth' y no posee un token, se redirigirá a la página de inicio. (y tampoco puede ingresar a ella)
+    // if (to.matched.some(record => record.meta.requiresAuth)) {
+    //     if (JwtService.getToken() == null) {
+    //         next({
+    //             path: '/',
+    //             params: {nextUrl: to.fullPath}
+    //         })
+    //     }
+    // } else {
+    //     next()
+    // }
+
     if (to.meta && to.meta.title)
         document.title = to.meta.title;
     next();
 });
-
 
 export default router

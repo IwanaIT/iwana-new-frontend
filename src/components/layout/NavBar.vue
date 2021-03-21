@@ -62,7 +62,7 @@
             </li>
 
             <li class="nav-item nav-link page-scroll">
-              <router-link to="#about" v-scroll-to="'#about'">Categorías</router-link>
+              <router-link to="/tiendas">Tiendas</router-link>
             </li>
             <li class="nav-item nav-link page-scroll">
               <router-link to="#about" v-scroll-to="'#about'">Mi Cuenta</router-link>

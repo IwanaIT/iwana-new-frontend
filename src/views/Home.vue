@@ -16,13 +16,13 @@
 </template>
 
 <script>
-import NavBar from "@/components/layout/NavBar";
+import NavBar from "../components/layout/NavBar";
 import Banner2 from "../components/layout/Banner2";
 import ComoComprar from "../components/layout/ComoComprar";
-import DestacadoEn from "@/components/layout/DestacadoEn";
-import Testimonios from "@/components/layout/Testimonios";
-import Partners from "@/components/layout/Partners";
-import FooterLanding from "@/components/layout/Footer";
+import DestacadoEn from "../components/layout/DestacadoEn";
+import Testimonios from "../components/layout/Testimonios";
+import Partners from "../components/layout/Partners";
+import FooterLanding from "../components/layout/Footer";
 import QueBuscasHoy from "../components/layout/QueBuscasHoy";
 import TiendasDestacadas from "../components/layout/TiendasDestacadas";
 import OfertasDiarias from "../components/layout/OfertasDiarias";
