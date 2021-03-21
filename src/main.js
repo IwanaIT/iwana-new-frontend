@@ -4,7 +4,7 @@ import App from './App.vue';
 import './registerServiceWorker';
 import router from './router';
 import store from './store';
-import ApiService from "@/services/api.service";
+import ApiService from "./services/api.service";
 import PaisesService from "@/services/paises.service";
 
 // ------------ css ----------
