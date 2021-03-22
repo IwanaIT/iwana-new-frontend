@@ -49,6 +49,12 @@ const routes = [
         meta: {title: 'Home 1 - Appco - App Landing Page Template'}
     },
     {
+        path: '/mi-cuenta',
+        name: 'MiCuenta',
+        component: () => import("../views/MiCuenta"),
+        meta: {title: 'Home 1 - Appco - App Landing Page Template'}
+    },
+    {
         path: '/',
         name: 'IndexOne',
         component: IndexOne,

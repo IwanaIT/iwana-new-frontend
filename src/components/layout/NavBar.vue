@@ -70,9 +70,7 @@
             <li class="nav-item nav-link page-scroll">
               <router-link to="#about" v-scroll-to="'#about'">Ofertas</router-link>
             </li>
-            <li class="nav-item nav-link page-scroll">
-              <router-link to="#about" v-scroll-to="'#about'">Tiendas</router-link>
-            </li>
+
             <li class="nav-item nav-link page-scroll">
               <router-link to="#about" v-scroll-to="'#about'">Favoritos</router-link>
             </li>
