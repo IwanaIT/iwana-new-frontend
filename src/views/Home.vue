@@ -2,12 +2,13 @@
   <div>
     <nav-bar/>
     <div class="main">
+      <tiendas-destacadas/>
       <banner2/>
       <que-buscas-hoy/>
       <como-comprar/>
       <destacado-en/>
       <ofertas-diarias/>
-      <tiendas-destacadas/>
+
       <testimonios/>
       <partners/>
       <footer-landing/>

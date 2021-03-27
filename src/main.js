@@ -1,5 +1,7 @@
 import Vue from 'vue';
 import {BootstrapVue, IconsPlugin} from 'bootstrap-vue'
+import Transitions from 'vue2-transitions'
+
 import App from './App.vue';
 import './registerServiceWorker';
 import router from './router';
@@ -31,6 +33,7 @@ import 'jquery.mb.ytplayer';
 
 
 import axios from "axios";
+
 if (null == PaisesService.getPaises()) {
     axios.get('https://localhost:8000/api/frontend/public/paises/informacion').then(result => {
         PaisesService.savePaises(JSON.stringify(result.data.data));
@@ -40,6 +43,7 @@ if (null == PaisesService.getPaises()) {
 
 Vue.use(VueScrollTo);
 Vue.use(VueYoutube);
+Vue.use(Transitions);
 
 gsap.registerPlugin(CSSRulePlugin);
 
