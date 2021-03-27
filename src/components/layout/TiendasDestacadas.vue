@@ -1,5 +1,5 @@
 <template>
-  <section class="promo-section ptb-100">
+  <section class="promo-section ptb-100 gray-light-bg">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-md-8">
@@ -8,20 +8,26 @@
           </div>
         </div>
       </div>
-      <div class="row equal">
-        <div v-for="(tiendaDestacada, i) in tiendasDestacadas" class="col-md-3" v-bind:key="i">
-          <div class="single-blog-card card border-0 shadow-sm">
-            <span class="category position-absolute badge badge-pill badge-primary">
-              5% Cashback
+      <div class="row">
+        <div v-for="(tiendaDestacada, i) in tiendasDestacadas" class="col-sm-6 col-md-2" v-bind:key="i">
+          <div class="card border-0 shadow-sm mb-4">
+            <div>
+            <span class="position-absolute badge iwana-badge-color">
+              {{ tiendaDestacada.maxCashback }}% Cashback
             </span>
-            <img
-                :src="'test/que-buscas-hoy.png'"
-                class="card-img-top position-relative p-3"
-                alt="blog"
-            />
-            <div class="meta-date card-body">
-              hola
             </div>
+            <div class="meta-date card-body">
+              <v-lazy-image
+                  :src="tiendaDestacada.imagen"
+                  src-placeholder="https://cdn-images-1.medium.com/max/80/1*xjGrvQSXvj72W4zD6IWzfg.jpeg"
+                  :alt="tiendaDestacada.nombre"
+                  class="card-img-top position-relative p-3 img-fluid"
+              />
+              <div class="icon-block">
+                <a type="button" class="mt-auto btn btn-lg btn-block btn-outline-info btn-outline-iwana small" href="">Ver Tienda</a>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
@@ -30,20 +36,17 @@
 </template>
 
 <script>
+import axios from "axios";
+import VLazyImage from "v-lazy-image";
+
 export default {
   name: "TiendasDestacadas",
+  components: {
+    VLazyImage
+  },
   data() {
     return {
-      tiendasDestacadas: [
-        {'innerId': 1, 'id': '', 'imagen': ''},
-        {'innerId': 2, 'id': '', 'imagen': ''},
-        {'innerId': 3, 'id': '', 'imagen': ''},
-        {'innerId': 4, 'id': '', 'imagen': ''},
-        {'innerId': 5, 'id': '', 'imagen': ''},
-        {'innerId': 6, 'id': '', 'imagen': ''},
-        {'innerId': 7, 'id': '', 'imagen': ''},
-        {'innerId': 8, 'id': '', 'imagen': ''},
-      ],
+      tiendasDestacadas: [],
     };
   },
   mounted() {
@@ -51,16 +54,37 @@ export default {
   },
   methods: {
     getTiendasDestacadas() {
-      // axios
-      //     .get('/api/frontend/public/tiendas/CL/tiendas-destacadas')
-      //     .then(response => {
-      //       for (let i = 0; i < 8; i++) {
-      //         let tienda = response.data.data[i];
-      //         this.tiendasDestacadas[i].id = tienda.id
-      //         this.tiendasDestacadas[i].imagen = tienda.imagen
-      //       }
-      //     })
+      axios
+          .get('/api/frontend/public/tiendas/CL/tiendas-destacadas')
+          .then(response => {
+            let tiendas = []
+            response.data.data.map(function (tienda) {
+              tiendas.push({
+                'id': tienda.id,
+                'imagen': tienda.imagen,
+                'nombre': tienda.nombre,
+                'maxCashback': tienda.maxCashback
+              })
+            });
+            this.tiendasDestacadas = tiendas;
+          })
     }
   }
 }
 </script>
+
+<style>
+.v-lazy-image {
+  filter: blur(10px);
+  transition: filter 0.7s;
+}
+
+.v-lazy-image-loaded {
+  filter: blur(0);
+}
+
+.iwana-badge-color {
+  background: #d9f8fd;
+  color: #133f60
+}
+</style>

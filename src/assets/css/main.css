@@ -38,6 +38,13 @@
     border-radius: 30px;
 }
 
+.btn-outline-iwana {
+    color: #17a2b8 !important;
+}
+.btn-outline-iwana:hover {
+    color: #FFFFFF !important;
+}
+
 .solid-iwana-btn:hover {
     background: transparent;
     color: #17a2b8;
@@ -604,7 +611,7 @@ select.form-control.has-value {
     right: -15px;
 }
 
-.main-menu ul>li a {
+.main-menu ul > li a {
     margin: 0 0 0 20px;
     font-size: 14px;
     color: #363232;
@@ -615,7 +622,7 @@ select.form-control.has-value {
     padding: 0;
 }
 
-.main-menu ul>li .submenu {
+.main-menu ul > li .submenu {
     width: 250px;
     background-color: #f4f7fa;
     border: 1px solid #ebebeb;
@@ -633,7 +640,7 @@ select.form-control.has-value {
     box-shadow: 0 2px 8px rgba(0, 0, 0, .12);
 }
 
-.main-menu ul>li .submenu-large {
+.main-menu ul > li .submenu-large {
     width: 250px;
     background-color: #f4f7fa;
     border: 1px solid #ebebeb;
@@ -651,42 +658,42 @@ select.form-control.has-value {
     box-shadow: 0 2px 8px rgba(0, 0, 0, .12);
 }
 
-.main-menu ul>li .submenu.dropdown-menu {
+.main-menu ul > li .submenu.dropdown-menu {
     margin: 0;
     padding: 0;
 }
 
-.main-menu ul>li:hover .submenu {
+.main-menu ul > li:hover .submenu {
     visibility: visible;
     opacity: 1;
     transform: rotateX(0) rotateY(0);
 }
 
-.dropdown:hover>.dropdown-menu {
+.dropdown:hover > .dropdown-menu {
     display: block;
 }
 
-.dropdown>.dropdown-toggle:active {
+.dropdown > .dropdown-toggle:active {
     pointer-events: none;
 }
 
-.main-menu ul>li .submenu>a {
+.main-menu ul > li .submenu > a {
     display: block;
     padding: 7px 15px;
     margin: 0;
     color: #363232;
 }
 
-.main-menu ul>li .submenu>a:hover {
+.main-menu ul > li .submenu > a:hover {
     background: #ebebeb;
 }
 
-.main-menu ul>li .submenu>a:active {
+.main-menu ul > li .submenu > a:active {
     background: inherit;
 }
 
-.main-menu ul>li .submenu:before,
-.main-menu ul>li .submenu:after {
+.main-menu ul > li .submenu:before,
+.main-menu ul > li .submenu:after {
     content: '';
     height: 0;
     width: 0;
@@ -796,7 +803,7 @@ select.form-control.has-value {
         color: #202877;
     }
 
-    .main-menu ul>li .submenu {
+    .main-menu ul > li .submenu {
         left: 0;
         top: 10px;
         position: relative;
@@ -806,12 +813,12 @@ select.form-control.has-value {
         padding: 15px 0 0;
     }
 
-    .main-menu ul>li a {
+    .main-menu ul > li a {
         margin: 0;
     }
 
-    .main-menu ul>li .submenu:before,
-    .main-menu ul>li .submenu:after {
+    .main-menu ul > li .submenu:before,
+    .main-menu ul > li .submenu:after {
         left: 15px;
     }
 
@@ -1478,7 +1485,6 @@ select.form-control.has-value {
 }
 
 
-
 .circles {
     overflow: hidden;
     width: 100%;
@@ -1738,7 +1744,6 @@ select.form-control.has-value {
 }
 
 
-
 /*client section css*/
 .client-section-wrap ul {
     display: block;
@@ -1829,7 +1834,7 @@ select.form-control.has-value {
     left: auto;
 }
 
-.switchable>div[class*='col-'] {
+.switchable > div[class*='col-'] {
     padding: 0;
 }
 
@@ -1862,7 +1867,7 @@ select.form-control.has-value {
     }
 }
 
-.switchable>div[class*='col-'] {
+.switchable > div[class*='col-'] {
     padding: 0;
 }
 
@@ -1874,11 +1879,11 @@ select.form-control.has-value {
 }
 
 @media (min-width: 768px) {
-    .switchable .container>.row {
+    .switchable .container > .row {
         flex-flow: row-reverse;
     }
 
-    .switchable.switchable-content .container>.row {
+    .switchable.switchable-content .container > .row {
         flex-flow: row;
     }
 }
@@ -2005,7 +2010,6 @@ select.form-control.has-value {
     background-repeat: no-repeat;
     background-size: cover;
 }
-
 
 
 /*=========================================
@@ -2430,8 +2434,6 @@ select.form-control.has-value {
 }
 
 
-
-
 /*price new style*/
 .popular-price {
     box-shadow: 0 1rem 3rem rgba(31, 45, 61, .125) !important;
@@ -2448,14 +2450,13 @@ select.form-control.has-value {
     background: #ffffff;
 }
 
-.accordion-faq.accordion>.card {
+.accordion-faq.accordion > .card {
     overflow: hidden;
-    border-color: #ebebeb;
-;
+    border-color: #ebebeb;;
     border-width: 1px 1px 0 1px;
 }
 
-.accordion-faq.accordion>.card .collapse.show {
+.accordion-faq.accordion > .card .collapse.show {
     border-bottom: 1px solid #ebebeb;
 }
 
@@ -2471,7 +2472,7 @@ select.form-control.has-value {
     border-radius: calc(0.375rem - 1px) calc(0.375rem - 1px) 0 0;
 }
 
-.accordion-faq.accordion>.card .card-header h6 {
+.accordion-faq.accordion > .card .card-header h6 {
     font-weight: 600;
     font-family: 'Montserrat', sans-serif;
 }
@@ -2538,8 +2539,6 @@ select.form-control.has-value {
     -webkit-transform: scale(1);
     transform: scale(1)
 }
-
-
 
 
 /*=========================================
@@ -2623,7 +2622,7 @@ select.form-control.has-value {
     transform: scale(0.8);
 }
 
-.screen-carousel.dot-indicator.owl-theme .owl-nav.disabled+.owl-dots {
+.screen-carousel.dot-indicator.owl-theme .owl-nav.disabled + .owl-dots {
     margin-top: 20px;
 }
 
@@ -2706,12 +2705,12 @@ select.form-control.has-value {
     box-shadow: 0 1rem 3rem rgba(0, 0, 0, .175) !important;
 }
 
-.list-creative>li+li {
+.list-creative > li + li {
     border-top: 1px solid #ebebeb;
 }
 
 @media (min-width: 992px) {
-    .list-creative>li {
+    .list-creative > li {
         padding: 30px 0;
     }
 }
@@ -2901,7 +2900,7 @@ select.form-control.has-value {
     transition: width .6s ease;
 }
 
-.progress-item+.progress-item {
+.progress-item + .progress-item {
     margin-top: 24px;
 }
 
@@ -2909,7 +2908,7 @@ select.form-control.has-value {
     margin-bottom: 20px;
 }
 
-.progress-title>h6 {
+.progress-title > h6 {
     font-size: .95375rem;
     margin-bottom: 8px;
     font-weight: 500;
@@ -2970,7 +2969,6 @@ select.form-control.has-value {
     top: 0;
     left: 0;
 }
-
 
 
 .page-footer {
@@ -3146,14 +3144,14 @@ small {
     font-size: 88%;
 }
 
-.login-signup-form .form-group .input-group.input-group-merge>.form-control {
+.login-signup-form .form-group .input-group.input-group-merge > .form-control {
     text-indent: 35px;
     border-top-left-radius: 4px;
     border-bottom-left-radius: 4px;
     height: calc(2.65em + .75rem + 2px);
 }
 
-.login-signup-form .form-group .input-group.input-group-merge>.form-control:focus {
+.login-signup-form .form-group .input-group.input-group-merge > .form-control:focus {
     z-index: inherit;
 }
 
@@ -3223,7 +3221,7 @@ small {
     padding-left: 0;
 }
 
-.custom-breadcrumb .breadcrumb-item+.breadcrumb-item::before {
+.custom-breadcrumb .breadcrumb-item + .breadcrumb-item::before {
     font-family: themify;
     content: "\e649";
     font-size: 10px;
@@ -3372,14 +3370,14 @@ section {
     opacity: 1;
 }
 
-.post-meta>li {
+.post-meta > li {
     position: relative;
     display: inline-block;
     padding: 0 14px 0 0;
     margin: 0 14px 0 0;
 }
 
-.post-meta>li:not(:last-child):after {
+.post-meta > li:not(:last-child):after {
     position: absolute;
     content: '/';
     right: -5px;
@@ -3455,8 +3453,8 @@ section {
     font-size: 13px;
 }
 
-.children>.comment,
-.children>.comment-shop {
+.children > .comment,
+.children > .comment-shop {
     border: 0;
     border-top: 1px solid #f0f0f0;
     margin-left: 85px;
@@ -3490,8 +3488,8 @@ section {
     font-size: 13px;
 }
 
-.comment-reply>a,
-.comment-reply-shop>a {
+.comment-reply > a,
+.comment-reply-shop > a {
     background: #f4f4f4;
     border-radius: .1875rem;
     padding: 5px 15px;
@@ -3499,16 +3497,16 @@ section {
     color: #222;
 }
 
-.comment-reply>a:hover,
-.comment-reply>a:focus,
-.comment-reply-shop>a:hover,
-.comment-reply-shop>a:focus {
+.comment-reply > a:hover,
+.comment-reply > a:focus,
+.comment-reply-shop > a:hover,
+.comment-reply-shop > a:focus {
     background: #202877;
     color: #fff;
 }
 
-.comment-list+.comment-respond,
-.comment-list-shop+.comment-respond {
+.comment-list + .comment-respond,
+.comment-list-shop + .comment-respond {
     margin-top: 30px;
 }
 
@@ -3585,7 +3583,7 @@ button,
     margin-bottom: 24px;
 }
 
-.widget .widget-title>h6 {
+.widget .widget-title > h6 {
     text-transform: uppercase;
     font-family: 'Montserrat', sans-serif;
     letter-spacing: 1px;
@@ -3646,8 +3644,8 @@ button,
     margin: 0;
 }
 
-.tag-cloud>a,
-.post-tags>a {
+.tag-cloud > a,
+.post-tags > a {
     background: #f4f4f4;
     border-radius: .1875rem;
     position: relative;
@@ -3661,8 +3659,8 @@ button,
     font-family: 'Montserrat', sans-serif;
 }
 
-.tag-cloud>a:hover,
-.post-tags>a:hover {
+.tag-cloud > a:hover,
+.post-tags > a:hover {
     background: #202877;
     color: #fff;
     opacity: 1;
