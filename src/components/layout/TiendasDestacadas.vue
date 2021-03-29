@@ -24,7 +24,7 @@
                   class="card-img-top position-relative p-3 img-fluid"
               />
               <div class="icon-block">
-                <a type="button" class="mt-auto btn btn-lg btn-block btn-outline-info btn-outline-iwana small" href="">Ver Tienda</a>
+                <a type="button" class="mt-auto btn btn-lg btn-block btn-outline-info btn-outline-iwana small" :href="tiendaDestacada.link">Ver Tienda</a>
               </div>
             </div>
 
@@ -63,7 +63,8 @@ export default {
                 'id': tienda.id,
                 'imagen': tienda.imagen,
                 'nombre': tienda.nombre,
-                'maxCashback': tienda.maxCashback
+                'maxCashback': tienda.maxCashback,
+                'link': 'cl/tienda/' + tienda.nombre
               })
             });
             this.tiendasDestacadas = tiendas;

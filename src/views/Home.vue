@@ -2,8 +2,9 @@
   <div>
     <nav-bar/>
     <div class="main">
+      <banner/>
       <tiendas-destacadas/>
-      <banner2/>
+
       <que-buscas-hoy/>
       <como-comprar/>
       <destacado-en/>
@@ -18,7 +19,7 @@
 
 <script>
 import NavBar from "../components/layout/NavBar";
-import Banner2 from "../components/layout/Banner2";
+import Banner from "../components/layout/Banner";
 import ComoComprar from "../components/layout/ComoComprar";
 import DestacadoEn from "../components/layout/DestacadoEn";
 import Testimonios from "../components/layout/Testimonios";
@@ -33,7 +34,7 @@ export default {
   components: {
     NavBar,
     QueBuscasHoy,
-    Banner2,
+    Banner,
     ComoComprar,
     DestacadoEn,
     Testimonios,

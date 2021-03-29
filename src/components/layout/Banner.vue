@@ -1,8 +1,8 @@
 <template>
-  <section class="hero-section pt-100 banner-section background-img">
-    <div class="container-fluid">
+  <section class="hero-section pt-100 banner-section">
+    <div class="container-fluid banner-container">
       <div class="row align-items-center justify-content-between">
-        <div class="col-md-9 col-lg-9">
+        <div class="col-md-12" v-if="banners.length > 0">
           <carousel
               :autoplay="true"
               :dots="true"
@@ -16,15 +16,10 @@
               :margin="0"
               :center="true"
               :nav="false"
-              class="screen-carousel owl-carousel owl-theme dot-indicator owl-loaded owl-drag"
+              class="screen-carousel owl-carousel owl-theme dot-indicator owl-loaded owl-drag color-iwana-primary"
           >
-            <img src="test/banner-whole.jpg" class="img-fluid">
-            <img src="test/banner-whole.jpg" class="img-fluid">
-            <img src="test/banner-whole.jpg" class="img-fluid">
+            <img v-for="(banner, i) in banners" v-bind:key="i" :src="banner.imagen" class="img-fluid" alt="iwanacash">
           </carousel>
-        </div>
-        <div class="col-md-3 col-lg-3">
-          <login-box/>
         </div>
       </div>
     </div>
@@ -32,32 +27,51 @@
 </template>
 
 <script>
-// import SubmitQuote from "../../views/index-six/SubmitQuote";
 import carousel from 'vue-owl-carousel'
-import LoginBox from "@/components/LoginBox";
+import axios from "axios";
 
-//import YTModal from "../../components/YTModal";
 export default {
-  name: "VideoPromo",
+  name: "Banner",
   components: {
-    // SubmitQuote,
     carousel,
-    LoginBox
   },
   data: function () {
     return {
-      showModal: false,
+      banners: [],
     };
   },
+  mounted() {
+    this.getBanners();
+  },
   methods: {
-    showYouTubeModal: function (e) {
-      e.preventDefault();
-      this.showModal = true;
-    },
+    getBanners() {
+      axios
+          .get('/api/frontend/public/banners/CL/banner/privado')
+          .then(response => {
+            let bannersResponse = []
+            response.data.data.map(function (banner) {
+              bannersResponse.push({
+                'id': banner.id,
+                'imagen': banner.imagen,
+              })
+            });
+            this.banners = bannersResponse;
+          })
+    }
   },
 };
 </script>
 
 <style>
+.banner-section {
+  margin-top: 15px;
+}
 
+.banner-container {
+  width: 60%;
+}
+
+.active span {
+  background: #17a2b8 !important;
+}
 </style>
