@@ -17,7 +17,7 @@ const routes = [
         meta: {title: 'IwanaCash - Elige tu tienda, compra y recibe dinero directo a tu bolsillo'}
     },
     {
-        path: '/tienda',
+        path: '/:pais/tienda/:nombreTienda',
         name: 'Tienda',
         component: () => import("../views/Tienda"),
         meta: {title: 'IwanaCash - Elige tu tienda, compra y recibe dinero directo a tu bolsillo'}

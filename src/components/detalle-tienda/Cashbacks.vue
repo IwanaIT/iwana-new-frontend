@@ -8,11 +8,11 @@
         <div class="card-body">
           <div class="row">
             <div class="col-md-8">
-              <h5 class="card-title">{{ cashback.titulo }}</h5>
-              <p class="card-text">{{ cashback.porcentaje }} % de Casback</p>
+              <p class="card-title ">{{ cashback.titulo }}</p>
+              <h5 class="card-text color-iwana-primary">{{ cashback.porcentaje }}% de Casback</h5>
             </div>
             <div class="col-md-4">
-              <a class="btn btn-outline-info" :href="cashback.link" >Comprar Ahora</a>
+              <a class="btn btn-outline-info btn-outline-iwana" :href="cashback.link" >Comprar Ahora</a>
             </div>
           </div>
         </div>
