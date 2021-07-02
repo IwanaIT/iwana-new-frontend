@@ -46,13 +46,13 @@ export default {
   methods: {
     getBanners() {
       axios
-          .get('/api/frontend/public/banners/CL/banner/privado')
+          .get('/api/frontend/private/banners/CL/banner/privado')
           .then(response => {
             let bannersResponse = []
             response.data.data.map(function (banner) {
               bannersResponse.push({
-                'id': banner.id,
-                'imagen': banner.imagen,
+                'id': banner.banner_id,
+                'imagen': banner.banner_imagen,
               })
             });
             this.banners = bannersResponse;

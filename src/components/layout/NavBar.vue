@@ -10,7 +10,7 @@
     >
       <div class="container-fluid">
         <a class="navbar-brand" href="/">
-          <img :src="'images/iwanacash-logo.svg'" width="220" alt="logo" class="img-fluid"/>
+          <img :src="'/images/iwanacash-logo.svg'" width="220" alt="logo" class="img-fluid"/>
         </a>
         <button
             class="navbar-toggler color-iwana-primary"
