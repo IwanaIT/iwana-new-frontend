@@ -82,21 +82,21 @@ export default {
       axios
           .get(url)
           .then(response => {
-            this.bannerTienda = response.data.data.banner;
-            this.descripcion = response.data.data.descripcion;
-            this.nombreTienda = response.data.data.nombre;
-            this.terminosYCondiciones = response.data.data.terminosYCondiciones;
+            this.bannerTienda = response.data.data.tienda_banner;
+            this.descripcion = response.data.data.tienda_descripcion;
+            this.nombreTienda = response.data.data.tienda_nombre;
+            this.terminosYCondiciones = response.data.data.tienda_terminos_y_condiciones;
             this.tiposCashback = response.data.data.tipoCashback;
-            this.logo = response.data.data.logo;
-            this.porcentajeCashback = response.data.data.maxCashback;
+            this.logo = response.data.data.tienda_imagen;
+            this.porcentajeCashback = response.data.data.tienda_maximo_descuento;
 
             let cashbacksData = []
             response.data.data.cashbacks.map(function (cashbacks) {
               cashbacksData.push({
-                'id': cashbacks.id,
-                'porcentaje': cashbacks.cashback,
-                'link': cashbacks.link,
-                'titulo': cashbacks.nombre
+                'id': cashbacks.cashback_id,
+                'porcentaje': cashbacks.cashback_descuento,
+                'link': cashbacks.cashback_link,
+                'titulo': cashbacks.cashback_nombre
               })
             });
 

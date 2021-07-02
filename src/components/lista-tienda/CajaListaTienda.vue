@@ -17,25 +17,6 @@
           </div>
         </div>
       </div>
-      <!--      <div class="row">-->
-      <!--        <div class="card-group">-->
-      <!--          <div v-for="(tienda, $index) in tiendas" :key="$index" class="col-md-3 mb-2">-->
-      <!--            <div class="card text-center">-->
-      <!--              <div class="meta-date card-body">-->
-      <!--                <img-->
-      <!--                    :src="'test/que-buscas-hoy.png'"-->
-      <!--                    class="card-img-top position-relative p-3 img-fluid"-->
-      <!--                    alt="blog"-->
-      <!--                    style="max-width:70%;"-->
-      <!--                />-->
-      <!--                <p>{{ tienda.nombre }}</p>-->
-      <!--                <p class="color-iwana-primary">Hasta 5% de Cashback</p>-->
-      <!--                <br>-->
-      <!--              </div>-->
-      <!--            </div>-->
-      <!--          </div>-->
-      <!--        </div>-->
-      <!--      </div>-->
       <infinite-loading @infinite="infiniteHandler"></infinite-loading>
     </div>
   </div>
@@ -63,7 +44,6 @@ export default {
           page: this.page,
         },
       }).then((response) => {
-
         if (response.data.data.length) {
           this.page += 1;
           this.tiendas.push(...response.data.data);

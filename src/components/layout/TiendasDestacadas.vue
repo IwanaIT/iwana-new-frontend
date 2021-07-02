@@ -1,5 +1,5 @@
 <template>
-  <section class="promo-section ptb-100 gray-light-bg">
+  <section class="p-3 gray-light-bg">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-md-8">
@@ -57,14 +57,14 @@ export default {
       axios
           .get('/api/frontend/public/tiendas/CL/tiendas-destacadas')
           .then(response => {
-            let tiendas = []
+            let tiendas = [];
             response.data.data.map(function (tienda) {
               tiendas.push({
-                'id': tienda.id,
-                'imagen': tienda.imagen,
-                'nombre': tienda.nombre,
-                'maxCashback': tienda.maxCashback,
-                'link': 'cl/tienda/' + tienda.nombre
+                'id': tienda.tienda_id,
+                'imagen': tienda.tienda_imagen,
+                'nombre': tienda.tienda_nombre,
+                'maxCashback': tienda.tienda_maximo_descuento,
+                'link': 'cl/tienda/' + tienda.tienda_nombre
               })
             });
             this.tiendasDestacadas = tiendas;

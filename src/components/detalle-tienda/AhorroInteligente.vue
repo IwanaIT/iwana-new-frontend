@@ -3,7 +3,7 @@
     <div class="meta-date card-body">
       <div class="row">
         <div class="col-sm-12 col-md-2">
-          <img src="images/light.svg" class="img-fluid">
+          <img src="/images/light.svg" class="img-fluid">
         </div>
         <div class="col-sm-12 col-md-10">
           <h4>Ahorro Inteligente</h4>
