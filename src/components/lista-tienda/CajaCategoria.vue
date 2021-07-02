@@ -26,13 +26,13 @@ export default {
   },
   methods: {
     getCategorias() {
-      let url = 'api/frontend/public/categorias/CL/categorias';
+      let url = '/api/frontend/public/categorias/CL/categorias';
       let category = [];
       axios.get(url).then((response) => {
         response.data.data.map(function (value) {
           category.push({
-            'id': value.id,
-            'nombre': value.nombre
+            'id': value.categoria_id,
+            'nombre': value.categoria_nombre
           })
         });
         this.categorias = category;
